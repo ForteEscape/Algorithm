@@ -1,0 +1,22 @@
+shellSort(array[])
+{
+    while interval < array.length/3 do{
+        interval = interval *3 + 1
+    }
+
+    while interval > 0 do{
+        for outer ← interval to array.length{
+            valueToInsert = array[outer];
+            inner = outer;
+
+            while inner > interval -1 && array[inner - interval] >= valueToInsert do{
+                array[inner] = array[inner - interval];
+                inner -= interval;
+            }
+
+            array[inner] = valueToInsert;
+        }
+
+        interval = (interval - 1) / 3;
+    } 
+}

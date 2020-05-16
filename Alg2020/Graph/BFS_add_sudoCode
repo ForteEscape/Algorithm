@@ -1,0 +1,24 @@
+
+
+BFS에서 최단 거리와 그 직전 노드를 알 수 있게 하는
+알고리즘의 의사 코드
+
+BFS(G, s){                                              // G is total graph, s is start vertax(node)
+    quene Q = empty;
+    for each node u{                                 
+        d[u] = -1;
+        pi[u] = null;
+    }                                  
+    pi[s] = null;                                       // no predecessor of s
+    Enqueue(Q, s);                                      // input s to quene Q
+    while(Q != empty){
+        u = Dequeue(Q)                                  // output elements of Q;
+        for each v adjacent to u {                      // u의 인접 노드들 각각에 대해
+            if(d[v] == -1){                             // 모든 노드들에 대해 -1로 초기화하고 -1이 아니면 visited로 간주한다.
+                d[v] = d[u]+1;                          // 최단 거리는 edge의 개수이다 즉 직전 노드까지의 edge 개수에 1을 더하면 된다.
+                pi[v] = u;                              // 직전 노드는 u자신이 된다.(뒷 노드를 기준으로)
+                Enqueue(Q, v);                          // unchecked 된 node의 케이스에서만 Enqueue 되므로 어떤 노드도 큐에 두번 들어가진 않는다.
+            }
+        }
+    }
+}

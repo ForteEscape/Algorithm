@@ -1,0 +1,17 @@
+
+BFS의 의사 코드 표현(persudo code)
+
+
+BFS(G, s){ // G is total graph, s is start vertax(node)
+    quene Q = empty;
+    Enqueue(Q, s); // input s to quene Q
+    while(Q != empty){
+        u = Dequeue(Q) // output elements of Q;
+        for each v adjacent to u { // u의 인접 노드들 각각에 대해
+            if(v == unvisited){
+                mark v as visited;
+                Enqueue(Q, v);
+            }
+        }
+    }
+}
