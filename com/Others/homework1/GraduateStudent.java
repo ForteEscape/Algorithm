@@ -1,4 +1,4 @@
-package Algorithm.backjoon.Others;
+package Algorithm.com.Others.homework1;
 
 public class GraduateStudent extends Student {
 
