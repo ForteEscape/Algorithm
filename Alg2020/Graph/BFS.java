@@ -1,4 +1,4 @@
-package Algorithm.Alg2020;
+package Algorithm.Alg2020.Graph;
 
 import java.util.Iterator;
 import java.util.LinkedList;
