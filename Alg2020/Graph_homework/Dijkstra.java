@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Dijkstra extends Graph{
     
     private ArrayList<LinkedList> list = new ArrayList<>();
+   // public int distance = 0;
 
     public LinkedList Dijkstra_Graph(String name1, String name2){
         LinkedList startLinkedList = findNode(name1);
@@ -36,6 +37,7 @@ public class Dijkstra extends Graph{
                     }
                     temp = temp.next;
                 }
+
             }
         }
 

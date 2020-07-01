@@ -5,6 +5,7 @@ public class LinkedList {
     public int size = 0;
     public boolean isVisited = false;
     public int distance = 0;
+    public int distance_print = 0;
     public int idx;
 
     public double dist = -1;

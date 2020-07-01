@@ -48,6 +48,7 @@ public class Problem {
 
                     LinkedList linkedList_d = dij.Dijkstra_Graph(name1, name2);
                     printInfo(linkedList_d);
+                    
                     break;
 
                 case "DFS":
@@ -70,10 +71,14 @@ public class Problem {
 
     private void printInfo(LinkedList linkedList_d){
         LinkedList temp = linkedList_d;
+        int distance = 0;
 
         while(temp != null){
             temp.head.printInfo();
             temp = temp.preLinkedList;
+            distance++;
         }
+
+        System.out.println(distance);
     }
 }
