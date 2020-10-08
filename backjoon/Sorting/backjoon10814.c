@@ -2,12 +2,13 @@
 #include<stdlib.h>
 #pragma warning(disable:4996)
 
-typedef struct Member {
-	int age = 0;
-	int order = 0;
+struct Member {
+	int age;
+	int order;
 	char name[101];
 };
 
+typedef struct Member Member;
 struct Member list[10000];
 
 int comparator(const void* front, const void* back);
@@ -31,8 +32,8 @@ int main()
 }
 
 int comparator(const void* front, const void* back) {
-	struct Member* member1 = (Member*)front;
-	struct Member* member2 = (Member*)back;
+	Member* member1 = (Member*)front;
+	Member* member2 = (Member*)back;
 
 	if (member1->age > member2->age) {
 		return 1;
